@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :courses
+  resources :courses do 
+    resources :chapters
+  end
   devise_for :users
   get 'home/land'
 
