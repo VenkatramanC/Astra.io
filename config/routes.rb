@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :courses
   devise_for :users
   get 'home/land'
 
@@ -6,7 +7,10 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'home#land'
+  authenticated :user do
+    root to: 'courses#index', as: :authenticated_root
+  end
+  root to: redirect('/users/sign_in')
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
