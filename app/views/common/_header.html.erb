@@ -9,10 +9,10 @@
       </button>
       <a class="navbar-brand" href="/">Astra.IO</a>
     </div>
-
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Know about us</a></li>
+        <% if user_signed_in?%>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Courses <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
@@ -34,10 +34,14 @@
             <li class="divider"></li>
             <li><a href="#">Separated link</a></li>
             <li class="divider"></li>
-            <li><a href="#">Signout</a></li>
+            <li><%= link_to "Signout" ,  destroy_user_session_path %></li>
           </ul>
         </li>
       </ul>
     </div>
+      <% else %>
+        <li><%= link_to "Login" , new_user_session_path %></li>
+        <li><%= link_to "Sign-up" , new_user_registration_path %></li>
+      <% end %>
   </div>
 </nav>
