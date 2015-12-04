@@ -44,6 +44,9 @@ gem 'font-awesome-sass', '~> 4.4.0'
 # SImple form Gem added
 gem 'simple_form'
 
+# Devise gem added
+gem 'devise'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
