@@ -1,3 +1,6 @@
 <h1>Our Courses</h1>
-<%= chapter.name %> 
-<%= chapter.video_url %>
+
+<% @course.chapters.each do |chapter|%>
+  <%= chapter.name %>   
+  <%= chapter.video_url %>
+<% end %>
