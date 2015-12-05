@@ -1,0 +1,7 @@
+<h1>Hello Welcome to Course</h1>
+
+<%= simple_form_for [@course , @chapter] do|f|%>
+  <%= f.input :name %>
+  <%= f.input :video_url%>
+  <%= f.submit "Add a Video" %>
+  <% end %>

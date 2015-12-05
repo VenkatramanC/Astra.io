@@ -5,8 +5,14 @@
     <% if @courses.any? %>
       <li><%= render @courses %></li>
     <% else %>
-      <%= link_to "Create a Course" , new_course_path %>
+      
+        <%= link_to "Create a Course" , new_course_path %>
+      
     <% end %>
   </ul>
 </div>
+
+<% if current_user.admin? %>
+   <%= link_to "Create a Course" , new_course_path %>
+<% end %>  
    

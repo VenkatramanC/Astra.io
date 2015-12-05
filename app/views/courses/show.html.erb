@@ -6,7 +6,11 @@
       <p>
         <%= @course.description %> 
       </p>
-        <%= link_to "Watch the full Course"%>
+        <%= link_to "Watch the full Course" , course_chapters_path(@course) %>
+  <li>
     
-
-   </div>
+   <%if current_user.admin? %>
+     <%= link_to "Create a Chapter" , new_course_chapter_path(@course) %>
+   <% end %>
+  </li>
+</div>
