@@ -1,8 +1,12 @@
-<h1>Courses List </h1>
-<ul>
-<% if @courses.any? %>
-   <li><%= render @courses %></li>
-   <% else %>
-    <%= link_to "Create a course"%>
-   <% end %>
-</ul>
+   <div class="row">
+
+      <h2>
+        <%= @course.title %>
+      </h2>
+      <p>
+        <%= @course.description %> 
+      </p>
+        <%= link_to "Watch the full Course"%>
+    
+
+   </div>
