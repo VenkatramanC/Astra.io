@@ -1,6 +1,13 @@
-<div class="row">
- <div class="col-md-4 well">
-  <%= course.course %>
-  <%= link_to "Start A Course" , class: "btn btn-primary pull-right"%> 
- </div>
+
+<div class="col-md-4 well">
+  <ul>
+    <h2>
+      <%= course.title %>
+    </h2>  
+    <p>
+      <%= course.description %>
+    </p> 
+    <%= link_to "View The Course" , course_path(course) , class: "btn btn-primary" %>
+  </ul>
 </div>
+

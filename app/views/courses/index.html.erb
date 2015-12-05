@@ -1,3 +1,12 @@
 <h1>Courses</h1>
+<div class="row">
+  
+  <ul>
+    <% if @courses.any? %>
+      <li><%= render @courses %></li>
+    <% else %>
+      <%= link_to "Create a Course" , new_course_path %>
+    <% end %>
+  </ul>
+</div>
    
-<%= link_to "Create a Course" , new_course_path %>
