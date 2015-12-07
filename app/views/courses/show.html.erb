@@ -6,7 +6,15 @@
       <p>
         <%= @course.description %> 
       </p>
-        <%= link_to "Watch the full Course"%>
-    
 
+      <h3> Topic 1 </h3>
+      <% if @course.title == "HTML" %>
+
+    	<iframe width="560" height="315" src="//www.youtube.com/embed/fS7w-TXinPE" frameborder="0" allowfullscreen></iframe>  
+    	<% elsif @course.title == "CSS" %>
+    		<iframe width="560" height="315" src="//www.youtube.com/embed/qKoajPPWpmo" frameborder="0" allowfullscreen></iframe> 
+    	<% elsif @course.title == "Javascript" %>
+    		<iframe width="560" height="315" src="//www.youtube.com/embed/J4Dko8UAh4U" frameborder="0" allowfullscreen></iframe> 
+
+    		<% end %>
    </div>
